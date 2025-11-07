@@ -677,7 +677,7 @@ def map_normalization_mahalanobis(validation_loader, teacher,
 
     return q_start, q_end
 
-@torch.no_grad
+@torch.no_grad()
 def get_weights(train_loader):
     counts = defaultdict(int)
     for _, seg, _, _, _ in tqdm(train_loader, desc="CE Weight Calculation"):
